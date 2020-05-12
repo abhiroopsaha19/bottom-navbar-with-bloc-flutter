@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
     canvasColor: Color(0xFF2B276D),
     primaryColor: Colors.white,
     textTheme: Theme.of(context).textTheme.copyWith(
-    caption: TextStyle(color: Colors.grey)
+    caption: TextStyle(color: Colors.white)
     )
     ),
     child: BottomNavigationBar(
