@@ -1,7 +1,12 @@
+import 'package:bottom_navbar_with_bloc_flutter/MyHome.dart';
 import 'package:bottom_navbar_with_bloc_flutter/bloc.dart';
 import 'package:bottom_navbar_with_bloc_flutter/state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:bottom_navbar_with_bloc_flutter/Visit.dart';
+import 'package:bottom_navbar_with_bloc_flutter/Prescription.dart';
+import 'package:bottom_navbar_with_bloc_flutter/PrescrCard.dart';
+import 'package:bottom_navbar_with_bloc_flutter/EditPrescrCard.dart';
 
 void main() => runApp(MyApp());
 
@@ -57,12 +62,6 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(title),
         backgroundColor:Color(0xFF2B276D),
       ),
-      body: Container(
-        color: color,
-        child: Center(
-          child: Text(title),
-        ),
-      ),
 
 
     bottomNavigationBar: Theme(
@@ -102,7 +101,20 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
         fixedColor: Colors.blue,
       ),
-    )
+
+
+      ),
+      body: new IndexedStack(
+          index: currentIndex,
+          children: <Widget>[
+
+             new MyHome(),
+          new Visit(),
+          new Prescription(),
+
+
+    ],
+      ),
     );
   }
 }
